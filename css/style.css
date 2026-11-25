@@ -903,6 +903,42 @@ html:has(.project-dialog[open]) { overflow: hidden; }
 }
 .footer-inner { display: flex; justify-content: space-between; gap: .5rem 1.5rem; flex-wrap: wrap; }
 .footer-inner p { margin: 0; }
+.cookie-settings {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.cookie-consent {
+  position: fixed;
+  z-index: 20;
+  inset: auto 1rem max(1rem, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--ink);
+  background: var(--stock);
+  color: var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.cookie-consent[hidden] { display: none; }
+.cookie-consent-copy h2 { margin: 0 0 .25rem; font-size: 1.25rem; }
+.cookie-consent-copy p { margin: 0; font-size: .95rem; }
+.cookie-consent-actions { display: flex; flex-shrink: 0; gap: .5rem; }
+@media (max-width: 560px) {
+  .cookie-consent { align-items: stretch; flex-direction: column; gap: .75rem; }
+  .cookie-consent-actions { justify-content: flex-end; flex-wrap: wrap; }
+}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

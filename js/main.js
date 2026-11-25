@@ -359,6 +359,30 @@
   try { startLang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang"); } catch (e) { /* storage unavailable */ }
   setLanguage(startLang || DEFAULT_LANG, false);
 
+  /* Analytics consent */
+  const consentBanner = document.getElementById("cookie-consent");
+  const consentSettings = document.getElementById("cookie-settings");
+  const consentChoice = (granted) => {
+    try { localStorage.setItem("analytics-consent", granted ? "granted" : "denied"); } catch (e) { /* storage unavailable */ }
+    window.setAnalyticsConsent(granted);
+    consentBanner.hidden = true;
+    consentSettings.focus();
+  };
+  document.getElementById("accept-analytics").addEventListener("click", () => consentChoice(true));
+  document.getElementById("reject-analytics").addEventListener("click", () => consentChoice(false));
+  consentSettings.addEventListener("click", () => {
+    consentBanner.hidden = false;
+    document.getElementById("accept-analytics").focus();
+  });
+  try {
+    if (localStorage.getItem("analytics-consent") !== "granted"
+      && localStorage.getItem("analytics-consent") !== "denied") {
+      consentBanner.hidden = false;
+    }
+  } catch (e) {
+    consentBanner.hidden = false;
+  }
+
   /* ---------------------------------------------------------------
      Highlight the nav link for the section in view
      --------------------------------------------------------------- */

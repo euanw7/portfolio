@@ -153,6 +153,14 @@ window.LANGUAGES.cy = {
     "contact.lead":
       "Boed yn swydd, yn brosiect neu'n gwestiwn am rywbeth ar y dudalen hon, byddwn yn falch o glywed gennych.",
     "footer.top": "Yn ôl i'r brig",
+    "footer.cookieSettings": "Gosodiadau cwcis",
+
+    // Analytics consent
+    "cookies.title": "Cwcis dadansoddeg",
+    "cookies.description":
+      "Rwy'n defnyddio Google Analytics i ddeall sut mae ymwelwyr yn defnyddio'r wefan hon. Mae dadansoddeg wedi'i diffodd oni bai eich bod yn dewis ei chaniatáu.",
+    "cookies.reject": "Gwrthod dadansoddeg",
+    "cookies.accept": "Caniatáu dadansoddeg",
 
     // The CV the download buttons give. Leave these out to offer the English CV.
     "cv.file": "assets/cv-cy.pdf",

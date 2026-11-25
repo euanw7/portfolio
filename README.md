@@ -59,6 +59,13 @@ assets/favicon.svg  Browser tab icon
 6. **Colours**: change the tokens at the top of `css/style.css`. The site opens in the
    paper (light) theme; visitors can switch to dark with the toggle in the header.
 
+## Analytics
+
+The Google Tag Manager container is loaded only after a visitor allows analytics.
+Configure the Google Analytics tag inside that GTM container and make sure it
+respects the `analytics_storage` consent signal. No GTM or analytics script is
+loaded when analytics is rejected.
+
 ## Previewing locally
 
 Opening `index.html` directly works. A local server is closer to how GitHub Pages
