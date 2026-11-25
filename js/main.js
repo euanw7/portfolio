@@ -366,7 +366,6 @@
     try { localStorage.setItem("analytics-consent", granted ? "granted" : "denied"); } catch (e) { /* storage unavailable */ }
     window.setAnalyticsConsent(granted);
     consentBanner.hidden = true;
-    consentSettings.focus();
   };
   document.getElementById("accept-analytics").addEventListener("click", () => consentChoice(true));
   document.getElementById("reject-analytics").addEventListener("click", () => consentChoice(false));
