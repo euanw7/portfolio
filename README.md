@@ -1,4 +1,4 @@
-# portfolio
+# Personal Portfolio Website
 
 A static portfolio site (CV, experience, skills and projects) built for GitHub Pages.
 It's plain HTML, CSS and JavaScript, with no build step and no dependencies.
