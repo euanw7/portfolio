@@ -1,0 +1,178 @@
+/* Shared styles for the CVs: cv.html (English) and cv-cy.html (Welsh). */
+:root {
+  --orange: #ff6c2f;
+  --blue: #0078bf;
+  --paper: #fcfaf5;
+  --ink: #1e1c1a;
+  --muted: #55504a;
+  --rule-soft: rgb(30 28 26 / .16);
+  --blue-ink: #005d99;
+  --mark-orange: rgb(255 108 47 / .42);
+  --mark-blue: rgb(0 120 191 / .28);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, monospace;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body {
+  background: #d9d4ca;
+  color: var(--ink);
+  font: 400 8pt/1.33 var(--font-body);
+}
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 10.5mm 12mm 9mm;
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen {
+  body { padding: 24px 0; }
+  .page { box-shadow: 0 10px 40px rgb(0 0 0 / .25); }
+}
+@media print {
+  body { background: none; }
+}
+
+h1, h2, h3 { margin: 0; font-family: var(--font-display); }
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* ---------- Header ---------- */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8mm;
+  padding-bottom: 2.6mm;
+  border-bottom: 1.6pt solid var(--ink);
+}
+.name {
+  font-size: 30pt;
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.03em;
+  color: var(--blue);
+  text-shadow: .045em .04em 0 var(--orange);
+  margin-bottom: 1.6mm;
+}
+.tagline {
+  font: 400 10.5pt/1.3 var(--font-display);
+}
+.tagline em {
+  font-style: italic;
+  background: linear-gradient(transparent 58%, var(--mark-orange) 58% 92%, transparent 92%);
+}
+.contact {
+  text-align: right;
+  font-size: 8pt;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.contact a { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: .9pt; text-underline-offset: 1.6pt; }
+
+.summary {
+  margin: 2.6mm 0 0;
+  font: 400 8.7pt/1.42 var(--font-display);
+}
+
+/* ---------- Columns ---------- */
+.cols {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 6mm;
+  margin-top: 3mm;
+}
+.col { display: flex; flex-direction: column; gap: 3mm; }
+
+.sec-title {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  font-size: 11.5pt;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  padding-top: 1.3mm;
+  margin-bottom: 1.8mm;
+  border-top: 1.2pt solid var(--ink);
+}
+.sec-title span {
+  background: linear-gradient(transparent 58%, var(--mark-orange) 58% 92%, transparent 92%);
+  padding: 0 .06em;
+  margin: 0 -.06em;
+}
+.sec-title.blue span {
+  background: linear-gradient(transparent 58%, var(--mark-blue) 58% 92%, transparent 92%);
+}
+
+/* ---------- Entries ---------- */
+.entry + .entry {
+  margin-top: 2mm;
+  padding-top: 1.8mm;
+  border-top: .6pt solid var(--rule-soft);
+}
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 3mm;
+}
+.entry h3 { font-size: 9.6pt; font-weight: 600; line-height: 1.2; }
+.date {
+  font: 500 7.6pt var(--font-mono);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.org {
+  color: var(--blue-ink);
+  font-weight: 500;
+  margin: .2mm 0 1mm;
+}
+.points { display: grid; gap: .45mm; }
+.points li { position: relative; padding-left: 3.4mm; }
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 1.3mm;
+  width: 1.3mm; height: 1.3mm;
+  background: var(--orange);
+}
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1mm;
+  font: 500 7pt var(--font-mono);
+  color: var(--blue-ink);
+}
+.tech li + li::before { content: "/"; margin: 0 .45em; color: #b4410c; }
+.note { margin-top: 2mm; font-weight: 600; }
+
+/* ---------- Right column ---------- */
+.modules { margin-top: .8mm; display: grid; gap: .2mm; }
+.modules li { display: flex; justify-content: space-between; gap: 2mm; }
+.modules li span:last-child { font: 500 7.6pt var(--font-mono); color: var(--muted); }
+.grade { margin-top: .4mm; }
+
+.skills { display: grid; gap: 1.1mm; }
+.skills dt {
+  font-size: 7.6pt;
+  font-weight: 600;
+  color: var(--blue-ink);
+}
+.skills dd { margin: .2mm 0 0; }
+.skills dl { margin: 0; }
+
+.project + .project { margin-top: 1.8mm; padding-top: 1.7mm; border-top: .6pt solid var(--rule-soft); }
+.project h3 { font-size: 9.2pt; font-weight: 600; line-height: 1.2; margin-bottom: .6mm; }
+.project h3 small { display: block; margin-top: .3mm; font: 500 7pt var(--font-mono); color: var(--blue-ink); }

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title data-i18n="meta.title">Euan Watkins — Software Engineer</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Euan Watkins, software engineer. CV, experience, skills and projects.">
+  <meta property="og:title" content="Euan Watkins — Software Engineer">
+  <meta property="og:description" content="CV, experience, skills and projects.">
+  <meta property="og:type" content="website">
+  <!-- TODO: add a social preview image -->
+  <!-- <meta property="og:image" content="https://euanw7.github.io/assets/img/og.png"> -->
+  <meta name="theme-color" content="#f3eee3">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Paper (light) by default; remembers the visitor's choice if they switch.
+       Language: ?lang=cy in the address, else the visitor's last choice. If it
+       isn't English, the page stays hidden for a moment so the English doesn't
+       flash up before it's translated. -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null, l = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      d.dataset.theme = t === 'dark' ? 'dark' : 'light';
+      try { l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang'); } catch (e) {}
+      if (l && l !== 'en') {
+        d.classList.add('lang-pending');
+        setTimeout(function () { d.classList.remove('lang-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Languages: one file each. English must come first; add new ones below it. -->
+  <script src="lang/en.js" defer></script>
+  <script src="lang/cy.js" defer></script>
+  <script src="data/projects.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Euan Watkins
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-attr="aria-label:nav.theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+          </button>
+          <a class="btn btn-small btn-solar" href="assets/cv.pdf" download="Euan-Watkins-CV.pdf" data-i18n-attr="href:cv.file, download:cv.filename">CV <span aria-hidden="true">&darr;</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <!-- The offset orange "misprint" copies this text automatically -->
+          <h1 class="hero-title overprint">Euan Watkins</h1>
+          <p class="hero-statement" data-i18n="hero.statement">
+            is a <em>software engineer</em>
+            based in Wales.
+          </p>
+          <p class="hero-lede" data-i18n="hero.lede">
+            First-class Software Engineering graduate from Swansea University, now a
+            Junior Software Developer at Stroomworks working on Stroom, a large-scale
+            data analytics platform.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-solar" href="assets/cv.pdf" download="Euan-Watkins-CV.pdf" data-i18n-attr="href:cv.file, download:cv.filename">
+              <span data-i18n="hero.download">Download CV</span> <span aria-hidden="true">&darr;</span>
+            </a>
+            <a class="btn" href="#projects" data-i18n="hero.projects">See projects</a>
+          </div>
+          <ul class="hero-links" aria-label="Elsewhere" data-i18n-attr="aria-label:hero.elsewhere">
+            <li><a href="https://github.com/euanw7">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/euan-watkins/">LinkedIn</a></li>
+            <li><a href="mailto:euanw7@hotmail.com" data-i18n="hero.email">Email</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="ink-sun" aria-hidden="true"></div>
+          <div class="ink-dots" aria-hidden="true"></div>
+          <figure class="portrait">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="portrait-frame">
+              <!-- To use a photo instead of initials, replace the span below with:
+                   <img src="assets/img/avatar.jpg" alt="Euan Watkins">
+                   It's printed in blue ink, riso style. Square or portrait crops work best. -->
+              <img src="assets/img/avatar-1.jpeg" alt="Euan Watkins">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container section-grid">
+        <header class="section-head reveal">
+          <h2><span class="mark" data-i18n="about.title">About</span></h2>
+        </header>
+        <div class="section-body reveal">
+          <div class="prose">
+            <p class="lead" data-i18n="about.lead">
+              I'm a software engineer with a strong foundation in object-oriented
+              programming and hands-on experience delivering full-stack, desktop and
+              data-driven applications.
+            </p>
+            <p data-i18n="about.p1">
+              I've worked across C#, Java, Python and modern web technologies, from WPF
+              apps running on manufacturing machinery at Renishaw to a warehouse
+              management system built in React and Node.js. I'm comfortable in Agile
+              teams and working directly with stakeholders, whether that's leading
+              stand-ups or presenting work to a client.
+            </p>
+            <p data-i18n="about.p2">
+              I'm motivated by problem-solving, continuous learning, and building
+              reliable, maintainable software for business-critical work.
+            </p>
+          </div>
+          <dl class="facts">
+            <div><dt data-i18n="about.basedIn">Based in</dt><dd data-i18n="about.basedInValue">Caerphilly, Wales</dd></div>
+            <div><dt data-i18n="about.currently">Currently</dt><dd data-i18n="about.currentlyValue">Junior Software Developer at Stroomworks</dd></div>
+            <div><dt data-i18n="about.degree">Degree</dt><dd data-i18n="about.degreeValue">BSc Software Engineering, First Class</dd></div>
+            <div><dt data-i18n="about.focus">Focus</dt><dd data-i18n="about.focusValue">Full-stack, desktop and data</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section section-projects" id="projects">
+      <div class="container section-grid">
+        <header class="section-head reveal">
+          <h2><span class="mark mark-blue" data-i18n="projects.title">Projects</span></h2>
+          <p class="section-note" data-i18n="projects.note">Open a project for the details.</p>
+        </header>
+        <div class="section-body">
+          <!-- Cards are generated from PROJECTS in data/projects.js -->
+          <div class="project-grid" id="project-grid"></div>
+          <noscript><p>Enable JavaScript to see the project cards.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="container section-grid">
+        <header class="section-head reveal">
+          <h2><span class="mark mark-blue" data-i18n="experience.title">Experience</span></h2>
+        </header>
+        <div class="section-body">
+          <ol class="entries">
+            <!-- One <li class="entry"> per role, newest first -->
+            <li class="entry reveal">
+              <p class="entry-date"><time datetime="2025-11">Nov 2025</time> &ndash; <span data-i18n="experience.now">now</span></p>
+              <div class="entry-body">
+                <h3><span data-i18n="exp.stroomworks.role">Junior Software Developer</span> <span class="entry-org" data-i18n="exp.stroomworks.org">Stroomworks Ltd, Bristol</span></h3>
+                <p data-i18n="exp.stroomworks.intro">Working on Stroom, a large-scale data analytics platform originally developed by GCHQ.</p>
+                <ul class="entry-points" data-i18n="exp.stroomworks.points">
+                  <li>Maintain and extend Stroom using Java and the GWT web framework.</li>
+                  <li>Delivered an independent Python project that generates Stroom analytic rules by combining and normalising data from MITRE ATT&amp;CK and SigmaHQ, enabling detection of a broad range of malicious activity in Windows Event Logs.</li>
+                  <li>Designed and built automation scripts that turn threat-intelligence datasets into deployable detection rules.</li>
+                  <li>Present technical work directly to the client, gathering feedback and iterating to meet operational requirements.</li>
+                  <li>Work in an Agile team with daily stand-ups and weekly reviews, delivering to tight deadlines while keeping code quality and documentation clear.</li>
+                </ul>
+                <ul class="inline-list" aria-label="Technologies" data-i18n-attr="aria-label:experience.technologies">
+                  <li>Java</li><li>GWT</li><li>Python</li><li>MITRE ATT&amp;CK</li><li>Sigma</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="entry reveal">
+              <p class="entry-date"><time datetime="2025-06">Jun 2025</time> &ndash; <time datetime="2025-11">Nov 2025</time></p>
+              <div class="entry-body">
+                <h3><span data-i18n="exp.tps.role">Full Stack Web Developer</span> <span class="entry-org" data-i18n="exp.tps.org">Total Protective Solutions 360 Ltd, Caerphilly</span></h3>
+                <p data-i18n="exp.tps.intro">Designed and built a custom warehouse management system with the company's stakeholders.</p>
+                <ul class="entry-points" data-i18n="exp.tps.points">
+                  <li>Delivered inventory tracking, role-based access control, real-time updates and job-based stock booking.</li>
+                  <li>Built a responsive, component-based UI with React Hooks to support efficient, user-friendly workflows.</li>
+                  <li>Built RESTful APIs backed by a MySQL database to securely manage inventory and user data.</li>
+                  <li>Iterated on features through direct stakeholder feedback, managing user stories in Jira.</li>
+                  <li>Kept code quality high through modular design and version control with Git and GitHub.</li>
+                </ul>
+                <ul class="inline-list" aria-label="Technologies" data-i18n-attr="aria-label:experience.technologies">
+                  <li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>Jira</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="entry reveal">
+              <p class="entry-date"><time datetime="2023-09">Sep 2023</time> &ndash; <time datetime="2024-09">Sep 2024</time></p>
+              <div class="entry-body">
+                <h3><span data-i18n="exp.renishaw.role">Software Engineer, Industrial Placement</span> <span class="entry-org">Renishaw PLC, Wotton-under-Edge</span></h3>
+                <p data-i18n="exp.renishaw.intro">A year in a six-person engineering team building WPF desktop applications.</p>
+                <ul class="entry-points" data-i18n="exp.renishaw.points">
+                  <li>Developed WPF desktop applications using C#, XAML and the MVVM architecture.</li>
+                  <li>Maintained and enhanced two live embedded software systems running on manufacturing machinery, covering machine status reporting and work cycle configuration.</li>
+                  <li>Co-developed a standalone licence management application, working closely with UX designers and product owners.</li>
+                  <li>Took part in the full Scrum lifecycle (stand-ups, sprint planning, reviews and retrospectives) and led stand-ups weekly.</li>
+                  <li>Researched web frameworks (Vue, React, Blazor) to support a future migration from desktop to web.</li>
+                </ul>
+                <ul class="inline-list" aria-label="Technologies" data-i18n-attr="aria-label:experience.technologies">
+                  <li>C#</li><li>WPF</li><li>XAML</li><li>MVVM</li><li>Scrum</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead reveal" data-i18n="education.title">Education</h3>
+          <ol class="entries">
+            <li class="entry reveal">
+              <p class="entry-date">2021 &ndash; 2025</p>
+              <div class="entry-body">
+                <h3><span data-i18n="edu.degree.title">BSc Software Engineering, First Class Honours</span> <span class="entry-org" data-i18n="edu.degree.org">Swansea University</span></h3>
+                <p data-i18n="edu.degree.detail">Top modules: Video Games Programming (86%), Big Data and Machine Learning (85%), Web Application Development (84%), Advanced Object-Oriented Programming (79%).</p>
+              </div>
+            </li>
+            <li class="entry reveal">
+              <p class="entry-date">2019 &ndash; 2021</p>
+              <div class="entry-body">
+                <h3><span data-i18n="edu.alevels.title">A Levels</span> <span class="entry-org" data-i18n="edu.alevels.org">Ysgol Gyfun Cwm Rhymni (Sixth Form)</span></h3>
+                <p data-i18n="edu.alevels.detail">4 A Levels: 3 A*s and an A.</p>
+              </div>
+            </li>
+            <li class="entry reveal">
+              <p class="entry-date">2014 &ndash; 2019</p>
+              <div class="entry-body">
+                <h3><span data-i18n="edu.gcse.title">GCSEs</span> <span class="entry-org">Ysgol Gyfun Cwm Rhymni</span></h3>
+                <p data-i18n="edu.gcse.detail">14 GCSEs: 5 A*s, 7 As, a B and a C.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container section-grid">
+        <header class="section-head reveal">
+          <h2><span class="mark" data-i18n="skills.title">Skills</span></h2>
+        </header>
+        <div class="section-body skill-groups">
+          <!-- data-accent="solar" (orange) or "volt" (blue) colours a group -->
+          <div class="skill-group reveal" data-accent="solar">
+            <h3 data-i18n="skills.languages">Languages</h3>
+            <ul><li>C#</li><li>Java</li><li>Python</li><li>PHP</li><li>TypeScript</li><li>JavaScript</li></ul>
+          </div>
+          <div class="skill-group reveal" data-accent="volt">
+            <h3 data-i18n="skills.frameworks">Frameworks</h3>
+            <ul><li>React</li><li>Vite</li><li>Node.js</li><li>Express</li><li>Laravel</li><li>Blazor</li><li>WPF</li><li>GWT</li></ul>
+          </div>
+          <div class="skill-group reveal" data-accent="solar">
+            <h3 data-i18n="skills.tools">Data &amp; tools</h3>
+            <ul><li>SQL (MySQL, PostgreSQL)</li><li>Git</li><li>GitHub</li><li>Bitbucket</li><li>Jira</li></ul>
+          </div>
+          <div class="skill-group reveal" data-accent="volt">
+            <h3 data-i18n="skills.ways">Ways of working</h3>
+            <ul data-i18n="skills.waysList"><li>Agile &amp; Scrum</li><li>Problem solving</li><li>Documentation &amp; code quality</li><li>Project &amp; time management</li><li>Collaboration &amp; communication</li><li>Continuous learning</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container section-grid">
+        <header class="section-head reveal">
+          <h2><span class="mark" data-i18n="contact.title">Say hello</span></h2>
+        </header>
+        <div class="section-body reveal">
+          <p class="lead" data-i18n="contact.lead">
+            Whether it's a role, a project or just a question about something on
+            this page, I'd be glad to hear from you.
+          </p>
+          <a class="contact-email" href="mailto:euanw7@hotmail.com">euanw7@hotmail.com</a>
+          <ul class="hero-links contact-links">
+            <li><a href="https://github.com/euanw7">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/euan-watkins/">LinkedIn</a></li>
+            <li><a href="assets/cv.pdf" download="Euan-Watkins-CV.pdf" data-i18n-attr="href:cv.file, download:cv.filename">CV (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Euan Watkins. <span data-i18n="footer.colophon"></span></p>
+      <p><a href="#top"><span data-i18n="footer.top">Back to top</span> &uarr;</a></p>
+    </div>
+  </footer>
+
+  <!-- Project details (filled in by js/main.js) -->
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="pd-inner">
+      <button class="pd-close" type="button" aria-label="Close" data-i18n-attr="aria-label:dialog.close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div id="project-dialog-content"></div>
+    </div>
+  </dialog>
+</body>
+</html>
