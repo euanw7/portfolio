@@ -99,7 +99,7 @@ window.PROJECTS = [
       "Showcase of services and pricing",
     ],
     stack: ["HTML", "CSS", "JavaScript"],
-    links: {website:"https://euanw7.github.io/concrete-barbers-website.co.uk/"},
+    links: {website:"https://euanw7.github.io/concrete-barbers-website/"},
     image: "assets/projects/concrete-barbers-website.png",
   },
   {
