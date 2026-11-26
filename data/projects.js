@@ -66,26 +66,26 @@ window.PROJECTS = [
     links: {website:"https://draig360.co.uk/"},
     image: "assets/projects/draig360-landing-page.png",
   },
-  {
-    name: "Concrete Barbers Website",
-    type: "Website",
-    year: 2026,
-    company: "Freelance",
-    accent: "orange",
-    image: null,
-    summary:
-      "A modern website for a local barber shop, showcasing services and contact information.",
-    description:
-      "A freelance project for a local barber shop. The website features a clean, modern design with easy navigation and responsive layout.",
-    highlights: [
-      "Modern, responsive design",
-      "Easy navigation and user-friendly interface",
-      "Showcase of services and pricing",
-    ],
-    stack: ["HTML", "CSS", "JavaScript"],
-    links: {website:"https://concretebarbers.co.uk/"},
-    image: "assets/projects/concrete-barbers-website.png",
-  },
+  // {
+  //   name: "Concrete Barbers Website",
+  //   type: "Website",
+  //   year: 2026,
+  //   company: "Freelance",
+  //   accent: "orange",
+  //   image: null,
+  //   summary:
+  //     "A modern website for a local barber shop, showcasing services and contact information.",
+  //   description:
+  //     "A freelance project for a local barber shop. The website features a clean, modern design with easy navigation and responsive layout.",
+  //   highlights: [
+  //     "Modern, responsive design",
+  //     "Easy navigation and user-friendly interface",
+  //     "Showcase of services and pricing",
+  //   ],
+  //   stack: ["HTML", "CSS", "JavaScript"],
+  //   links: {website:"https://concretebarbers.co.uk/"},
+  //   image: "assets/projects/concrete-barbers-website.png",
+  // },
   // {
   //   name: "Charity Website",
   //   type: "Website",
