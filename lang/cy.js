@@ -191,12 +191,39 @@ window.LANGUAGES.cy = {
   },
 
   projects: {
+    "Coach Carys Website": {
+      name: "Gwefan Coach Carys",
+      type: "Gwefan",
+      summary:
+        "Gwefan fodern i hyfforddwr personol, yn arddangos gwasanaethau a manylion cyswllt.",
+      description:
+        "Prosiect llawrydd i hyfforddwr personol mewn campfa leol. Mae gan y wefan ddyluniad glân a modern, llywio hawdd a chynllun ymatebol.",
+      highlights: [
+        "Dyluniad modern ac ymatebol",
+        "Llywio hawdd a rhyngwyneb hawdd ei ddefnyddio",
+        "Arddangos gwasanaethau a phrisiau",
+      ],
+    },
+    "Charity Website": {
+      name: "Gwefan Elusen",
+      type: "Gwefan",
+      summary:
+        "Gwefan fodern i elusen leol, yn arddangos ei gwasanaethau a'i manylion cyswllt.",
+      description:
+        "Prosiect llawrydd i elusen leol. Mae gan y wefan ddyluniad glân a modern, llywio hawdd a chynllun ymatebol.",
+      highlights: [
+        "Dyluniad modern ac ymatebol",
+        "Llywio hawdd a rhyngwyneb hawdd ei ddefnyddio",
+        "Arddangos gwasanaethau a phrisiau",
+      ],
+    },
     "Draig360": {
       type: "Ap Gwe",
       summary:
         "Cymhwysiad gwe pentwr llawn i gwmnïau adeiladu, ar gyfer rheoli swyddi, gweithwyr a deunyddiau.",
       description: "Prosiect llawrydd sy'n seiliedig ar fy nhraethawd hir.",
       highlights: [
+        "Datblygu'n parhau.",
         "Cymhwysiad byw gyda nifer o gwsmeriaid.",
         "Rheolaeth dros stoc a deunyddiau'r warws.",
         "Rheoli cylch bywyd swyddi ac ansawdd o'r dechrau i'r diwedd.",
@@ -205,6 +232,18 @@ window.LANGUAGES.cy = {
         "Dangosfyrddau a dadansoddeg y gellir eu haddasu.",
         "Dyluniad ymatebol ar gyfer ffonau symudol a thabledi.",
         "Dilysu defnyddwyr a rheoli mynediad ar sail rôl.",
+      ],
+    },
+    "Lunar Lander": {
+      name: "Gêm Lanio ar y Lleuad",
+      type: "Gêm 2D",
+      summary: "Gêm lanio ar y Lleuad 2D a ddatblygwyd yn Unity.",
+      description:
+        "Gêm lanio ar y Lleuad 2D wedi'i hadeiladu yn Unity. Mae'r chwaraewr yn rheoli llong ofod ac yn gallu hedfan o amgylch amgylchedd 2D o blanedau, lleuadau ac asteroidau.",
+      highlights: [
+        "Mecaneg hedfan ffisegol a disgyrchiant wedi'u hadeiladu'n bwrpasol",
+        "Rheoli tanwydd a bonysau hwb",
+        "Planedau, lleuadau ac asteroidau lluosog sy'n cylchdroi o amgylch ei gilydd",
       ],
     },
     "Concrete Barbers Website": {
@@ -231,6 +270,36 @@ window.LANGUAGES.cy = {
         "Cyfuno a normaleiddio dwy ffynhonnell o wybodaeth am fygythiadau",
         "Sgriptiau awtomeiddio sy'n cynhyrchu rheolau canfod y gellir eu defnyddio",
         "Cyflwyno i'r cleient a gwella'r gwaith yn ôl eu hadborth",
+      ],
+    },
+    "Game Compilation": {
+      name: "Casgliad o Gemau",
+      type: "Gemau 2D",
+      summary: "Casgliad o gemau 2D wedi'u creu yn Unity.",
+      description:
+        "Casgliad o gemau 2D a ddatblygwyd yn Unity, sy'n dangos amrywiaeth o fecaneg chwarae ac egwyddorion dylunio. Crëwyd fel prosiect personol i adnewyddu ac ehangu fy sgiliau datblygu gemau.",
+      highlights: [
+        "Dewislen i ddewis o blith amrywiaeth o gemau 2D",
+        "Mae'r gemau'n cynnwys clonau o Pong, Snake, Breakout a Flappy Bird",
+        "Mae pob gêm yn dangos mecaneg chwarae ac egwyddorion dylunio gwahanol",
+        "Mae gan bob gêm ei sgoriau uchaf a'i gosodiadau ei hun",
+        "Mae gan gêm Flappy Bird addasydd cymeriad",
+      ],
+    },
+    "Language Learning App": {
+      name: "Ap Dysgu Ieithoedd",
+      type: "Ap Penbwrdd",
+      summary:
+        "Ap penbwrdd ar gyfer dysgu ieithoedd sy'n defnyddio model AI lleol i greu sgyrsiau.",
+      description:
+        "Wedi'i adeiladu yn Python gan ddefnyddio Tkinter ar gyfer y rhyngwyneb graffigol a phecynnau amrywiol ar gyfer trosi testun yn lleferydd a phrosesu iaith naturiol.",
+      highlights: [
+        "Ap penbwrdd ar gyfer dysgu ieithoedd",
+        "Yn defnyddio model AI lleol i greu sgyrsiau",
+        "Yn defnyddio Google Text-to-Speech i gynhyrchu sain",
+        "Yn defnyddio Google Translate ar gyfer cyfieithiadau",
+        "Yn cefnogi unrhyw iaith sydd ar gael yn Google Translate",
+        "Yn galluogi defnyddwyr i gadw geiriadur o eiriau ac ymadroddion maen nhw am eu dysgu",
       ],
     },
     "Site Management App": {
