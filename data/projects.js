@@ -20,6 +20,8 @@
                image, it's shown while the video loads and to visitors
                who've turned off animations. Keep clips short and small
                (ideally under 5 MB) and save them as MP4 (H.264).
+   status      Optional. Set to "comingSoon" to show a Coming Soon
+               banner instead of the project's image or video.
    imageAlt    Optional. Describes the image or video for screen
                readers. Defaults to "Screenshot of <name>" (or
                "Video of <name>").
@@ -42,6 +44,66 @@
 
 window.PROJECTS = [
   {
+    name: "Coach Carys Website",
+    type: "Website",
+    year: 2026,
+    company: "Freelance",
+    accent: "orange",
+    summary:
+      "A modern website for a personal trainer, showcasing services and contact information.",
+    description:
+      "A freelance project for a personal trainer at a local gym. The website features a clean, modern design with easy navigation and responsive layout.",
+    highlights: [
+      "Modern, responsive design",
+      "Easy navigation and user-friendly interface",
+      "Showcase of services and pricing",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    // links: {website:"https://coachcarys.co.uk/"},
+    image: "assets/projects/coach-carys-website.png",
+    status: "comingSoon",
+  },
+  {
+    name: "Charity Website",
+    type: "Website",
+    year: 2026,
+    company: "Freelance",
+    accent: "blue",
+    summary:
+      "A modern website for a local charity, showcasing services and contact information.",
+    description:
+      "A freelance project for a local charity. The website features a clean, modern design with easy navigation and responsive layout.",
+    highlights: [
+      "Modern, responsive design",
+      "Easy navigation and user-friendly interface",
+      "Showcase of services and pricing",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    // links: {website:"https://charity.co.uk/"},
+    image: "assets/projects/charity-website.png",
+    status: "comingSoon",
+  },
+  {
+    name: "Concrete Barbers Website",
+    type: "Website",
+    year: 2026,
+    company: "Freelance",
+    accent: "orange",
+    summary:
+      "A modern website for a local barber shop, showcasing services and contact information.",
+    description:
+      "A freelance project for a local barber shop. The website features a clean, modern design with easy navigation and responsive layout.",
+    highlights: [
+      "Modern, responsive design",
+      "Easy navigation and user-friendly interface",
+      "Showcase of services and pricing",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    // links: {website:"https://concretebarbers.co.uk/"},
+    image: "assets/projects/concrete-barbers-website.png",
+    status: "comingSoon",
+  },
+  {
     name: "Draig360",
     type: "Web App",
     year: 2026,
@@ -53,6 +115,7 @@ window.PROJECTS = [
     description:
       "A freelance project based on my dissertation. ",
     highlights: [
+      "Continued development.",
       "Live application with multiple customers.",
       "Control over warehouse stock and materials.",
       "End-to-end job lifecycle and quality management.",
@@ -66,52 +129,31 @@ window.PROJECTS = [
     links: {website:"https://draig360.co.uk/"},
     image: "assets/projects/draig360-landing-page.png",
   },
-  // {
-  //   name: "Concrete Barbers Website",
-  //   type: "Website",
-  //   year: 2026,
-  //   company: "Freelance",
-  //   accent: "orange",
-  //   image: null,
-  //   summary:
-  //     "A modern website for a local barber shop, showcasing services and contact information.",
-  //   description:
-  //     "A freelance project for a local barber shop. The website features a clean, modern design with easy navigation and responsive layout.",
-  //   highlights: [
-  //     "Modern, responsive design",
-  //     "Easy navigation and user-friendly interface",
-  //     "Showcase of services and pricing",
-  //   ],
-  //   stack: ["HTML", "CSS", "JavaScript"],
-  //   links: {website:"https://concretebarbers.co.uk/"},
-  //   image: "assets/projects/concrete-barbers-website.png",
-  // },
-  // {
-  //   name: "Charity Website",
-  //   type: "Website",
-  //   year: 2026,
-  //   company: "Freelance",
-  //   accent: "blue",
-  //   image: null,
-  //   summary:
-  //     "A modern website for a local charity, showcasing services and contact information.",
-  //   description:
-  //     "A freelance project for a local charity. The website features a clean, modern design with easy navigation and responsive layout.",
-  //   highlights: [
-  //     "Modern, responsive design",
-  //     "Easy navigation and user-friendly interface",
-  //     "Showcase of services and pricing",
-  //   ],
-  //   stack: ["HTML", "CSS", "JavaScript"],
-  //   links: {website:"https://charity.co.uk/"},
-  //   image: "assets/projects/charity-website.png",
-  // },
+  {
+    name: "Lunar Lander",
+    type: "2D Game",
+    year: 2026,
+    company: "Personal",
+    accent: "orange",
+    image: null,
+    summary:
+      "A 2D lunar lander game developed in Unity.",
+    description:
+      "A 2D lunar lander game built in Unity where the player controls a spacecraft and can fly around a 2D environment of planets, moons, and asteroids. ",
+    highlights: [
+      "Custom-built gravity and physics-based flight mechanics",
+      "Fuel management and boost power-ups",
+      "Multiple planets, moons, and asteroids that orbit each other"
+    ],
+    stack: ["C#", "Unity"],
+    video: "assets/projects/lunar-lander.mp4",
+  },
   {
     name: "Detection Rule Generator",
     type: "Automation",
     year: 2025,
     company: "Stroomworks",
-    accent: "orange",
+    accent: "blue",
     image: null,
     summary:
       "Python tooling that turns MITRE ATT&CK and SigmaHQ data into Stroom detection rules for Windows Event Logs.",
@@ -129,7 +171,7 @@ window.PROJECTS = [
     name: "Site Management App",
     type: "Dissertation",
     year: 2025,
-    accent: "blue",
+    accent: "orange",
     image: null,
     summary:
       "A full-stack web app that brought a construction company's scattered tools and manual processes into one platform.",
@@ -146,11 +188,54 @@ window.PROJECTS = [
     links: {repo:"https://github.com/euanw7/site-manager"},
   },
   {
+    name: "Game Compilation",
+    type: "2D Games",
+    year: 2025,
+    company: "Personal",
+    accent: "blue",
+    image: null,
+    summary:
+      "A compilation of 2D games built in Unity.",
+    description:
+      "A collection of 2D games developed in Unity, showcasing various gameplay mechanics and design principles. Created as a personal project to refresh and expand my skills in game development.",
+    highlights: [
+      "A menu to select from a variety of 2D games",
+      "Games include Pong, Snake, Breakout, and Flappy Bird clones",
+      "Each game demonstrates different gameplay mechanics and design principles",
+      "Each game has separate highscores and settings",
+      "The Flappy Bird clone has a character customiser"
+    ],
+    stack: ["C#", "Unity"],
+    video: "assets/projects/beginner-games.mp4",
+  },
+  {
+    name: "Language Learning App",
+    type: "Desktop App",
+    year: 2025,
+    company: "University",
+    accent: "orange",
+    image: null,
+    summary:
+      "A desktop application for language learning using a local AI model to generate conversations.",
+    description:
+      "Built in Python using Tkinter for the GUI and various packages for text to speech and natural language processing.",
+    highlights: [
+      "A desktop application for language learning",
+      "Uses a local AI model to generate conversations",
+      "Uses Google Text-to-Speech for audio output",
+      "Uses Google Translate for translations.",
+      "Supports any language supported by Google Translate",
+      "Allows users to keep a dictionary of words and phrases they want to learn",
+    ],
+    stack: ["Python", "Tkinter"],
+    image: "assets/projects/language-learning.png",
+  },
+  {
     name: "Stealth Side-Scroller",
     type: "2D Game",
     year: 2025,
     company: "University",
-    accent: "orange",
+    accent: "blue",
     image: null,
     summary:
       "A 2D stealth-action game where enemy AI patrols, hunts for the player and fights back.",
@@ -169,7 +254,7 @@ window.PROJECTS = [
     name: "Web Chat App",
     type: "Web App",
     year: 2024,
-    accent: "blue",
+    accent: "orange",
     image: null,
     summary:
       "A Laravel app where users post text and images, like and comment on each other's posts, and manage their profiles.",

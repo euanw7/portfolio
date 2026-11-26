@@ -33,6 +33,7 @@ window.LANGUAGES.en = {
     // Images and videos
     screenshotOf: "Screenshot of {name}",
     videoOf: "Video of {name}",
+    comingSoon: "Coming Soon",
     playVideo: "Play video",
     pauseVideo: "Pause video",
   },

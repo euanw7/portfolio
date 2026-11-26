@@ -117,10 +117,14 @@
 
   // A project's image, or a looping video (with the image as its poster)
   const media = (p, cls) => {
-    if (!p.image && !p.video) return "";
-    const imgAlt = esc(p.imageAlt ?? t("screenshotOf", { name: p.name }));
     const wrap = (inner, extra = "") =>
       `<div class="${cls}${p.duotone ? " is-duotone" : ""}${extra}">${inner}</div>`;
+    if (p.status === "comingSoon") {
+      const label = esc(t("comingSoon"));
+      return wrap(`<div class="coming-soon-banner" role="img" aria-label="${label}">${label}</div>`, " is-coming-soon");
+    }
+    if (!p.image && !p.video) return "";
+    const imgAlt = esc(p.imageAlt ?? t("screenshotOf", { name: p.name }));
     if (!p.video) return wrap(`<img src="${esc(p.image)}" alt="${imgAlt}" loading="lazy">`);
     return wrap(
       `<video src="${esc(p.video)}"${p.image ? ` poster="${esc(p.image)}"` : ""} data-alt="${imgAlt}"

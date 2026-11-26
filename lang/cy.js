@@ -185,6 +185,7 @@ window.LANGUAGES.cy = {
 
     screenshotOf: "Sgrinlun o {name}",
     videoOf: "Fideo o {name}",
+    comingSoon: "Yn dod yn fuan",
     playVideo: "Chwarae'r fideo",
     pauseVideo: "Oedi'r fideo",
   },
