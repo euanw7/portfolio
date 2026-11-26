@@ -99,9 +99,8 @@ window.PROJECTS = [
       "Showcase of services and pricing",
     ],
     stack: ["HTML", "CSS", "JavaScript"],
-    // links: {website:"https://concretebarbers.co.uk/"},
+    links: {website:"https://euanw7.github.io/concrete-barbers-website.co.uk/"},
     image: "assets/projects/concrete-barbers-website.png",
-    status: "comingSoon",
   },
   {
     name: "Draig360",
